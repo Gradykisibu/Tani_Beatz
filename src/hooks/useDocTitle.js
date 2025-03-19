@@ -5,7 +5,7 @@ const useDocTitle = (title) => {
         if (title) {
             document.title = `${title} - Tani_Beatz`;
         } else {
-            document.title = 'Tani_Beatz | The Perfect Clothing Store';
+            document.title = 'Tani_Beatz | The Perfect Clothing Brand Store';
         }
     }, [title]);
 
