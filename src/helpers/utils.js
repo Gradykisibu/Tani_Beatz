@@ -1,9 +1,9 @@
 
 // Display Money in Indian Format
 export const displayMoney = (n) => {
-    const numFormat = new Intl.NumberFormat('en-IN', {
+    const numFormat = new Intl.NumberFormat('en-ZA', {
         style: 'currency',
-        currency: 'INR',
+        currency: 'ZAR',
     });
 
     return numFormat.format(n).split('.', 1);
