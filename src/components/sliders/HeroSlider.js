@@ -27,6 +27,7 @@ const HeroSlider = () => {
                 delay: 4000,
                 disableOnInteraction: false,
             }}
+            // style={{border:"1px solid red"}}
         >
             {
                 heroProducts.map((item, i) => {

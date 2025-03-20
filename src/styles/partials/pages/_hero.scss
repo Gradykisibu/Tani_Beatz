@@ -1,5 +1,5 @@
 #hero {
-    min-height: 100vh;
+    height: 80vh;
     @include centered;
 
     .swiper {
@@ -10,6 +10,12 @@
 
     .swiper-pagination {
         bottom: 30px;
+        .swiper-pagination-bullet {
+            background-color: #4b0082; // Change pagination bullet color
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #4b0082; // Change active pagination bullet color
+        }
     }
 }
 
@@ -18,12 +24,90 @@
     @include grid-cols(2, 0.4fr, 2rem);
     place-content: center;
     place-items: center;
+    background: linear-gradient(135deg, #000000, #4b0082); // Gradient background
+    padding: 2rem;
+    border-radius: 20px;
+
+    &:hover {
+        // transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
 
     &::before {
         @include pseudo($top: 10%);
         font-size: 15rem;
         font-weight: 700;
-        opacity: 0.05;
+        opacity: 0.05;        .hero_item_img {
+            overflow: hidden;
+        
+            img {
+                @include img-fit;
+            }
+        
+            @include devices(lg) {
+                grid-row: 1;
+            }
+        
+            @include devices(sm) {
+                max-width: 20rem; // Increased from 18rem to 20rem
+                width: 100%;
+            }
+        }
+        
+        .hero_item {
+            // Removed box-shadow property
+            transition: background-color 0.2 ease-in-out; // Smooth transition for background color
+        
+            &::before {
+                @include pseudo($top: 10%);
+                font-size: 15rem;
+                font-weight: 700;
+                opacity: 0.05;
+        
+                @include devices(xl) {
+                    font-size: 12rem;
+                }
+        
+                @include devices(sm) {
+                    font-size: 8rem;
+                }
+            }
+        
+            &.hero_slide-0::before {
+                content: "Fashion";
+            }
+        
+            &.hero_slide-1::before {
+                content: "Beats";
+            }
+        
+            &.hero_slide-2::before {
+                content: "Bookings";
+            }
+        
+            @include devices(lg) {
+                grid-template-columns: 0.7fr;
+                gap: 4rem;
+            }
+        }
+        
+        // Add keyframes for background color transition
+        @keyframes backgroundTransition {
+            0% {
+                background-color: purple;
+            }
+            50% {
+                background-color: black;
+            }
+            100% {
+                background-color: currentColor; // Replace with the color displaying now
+            }
+        }
+        
+        // Apply the animation to the hero item
+        .hero_item {
+            animation: backgroundTransition 5s infinite alternate;
+        }
 
         @include devices(xl) {
             font-size: 12rem;
@@ -35,15 +119,15 @@
     }
 
     &.hero_slide-0::before {
-        content: "Over Ear";
+        content: "Fashion";
     }
 
     &.hero_slide-1::before {
-        content: "In Ear";
+        content: "Beats";
     }
 
     &.hero_slide-2::before {
-        content: "Over Ear";
+        content: "Bookings";
     }
 
     @include devices(lg) {
@@ -60,10 +144,16 @@
 .hero_item_txt,
 .hero_item_img {
     position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+    border-radius: 15px;
+
+
 }
 
 .hero_item_txt {
     text-shadow: var(--text-shadow);
+    color: #fff;
 
     h1 {
         font-size: 3rem;
@@ -100,15 +190,19 @@
             @include margin-y(1.5rem, 2rem);
         }
     }
-
 }
 
 .hero_item_img {
     overflow: hidden;
 
-
     img {
         @include img-fit;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     @include devices(lg) {

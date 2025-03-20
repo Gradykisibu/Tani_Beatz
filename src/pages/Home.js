@@ -2,8 +2,9 @@ import React from 'react';
 import HeroSlider from '../components/sliders/HeroSlider';
 import FeaturedSlider from '../components/sliders/FeaturedSlider';
 import SectionsHead from '../components/common/SectionsHead';
-import TopProducts from '../components/product/TopProducts';
+// import TopProducts from '../components/product/TopProducts';
 import Services from '../components/common/Services';
+import ServiceSection from '../components/product/ServiceSection';
 
 
 const Home = () => {
@@ -23,10 +24,18 @@ const Home = () => {
 
             <section id="products" className="section">
                 <div className="container">
+                    <SectionsHead heading="Our Services" />
+                    <ServiceSection />
+                </div>
+            </section>
+
+            {/* <section id="products" className="section">
+                <div className="container">
                     <SectionsHead heading="Top Products" />
                     <TopProducts />
                 </div>
-            </section>
+            </section> */}
+
 
             <Services />
         </main>
