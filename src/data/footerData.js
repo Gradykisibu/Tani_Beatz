@@ -87,11 +87,6 @@ export const footMenu = [
                 link: "Careers",
                 path: "/"
             },
-            {
-                id: 5,
-                link: "Affiliates",
-                path: "/"
-            },
         ]
     }
 ];
