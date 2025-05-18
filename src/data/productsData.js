@@ -114,10 +114,10 @@ const productsData = [
     {
         id: 6,
         images: [
-            "/images/products/jbl200bt-1.png",
-            "/images/products/jbl200bt-2.png",
-            "/images/products/jbl200bt-3.png",
-            "/images/products/jbl200bt-4.png",
+            "/images/products/TaniWhiteShirtFront.jpeg",
+            "/images/products/TaniWhiteShirtBack.jpeg",
+            "/images/products/TaniWhiteShirtFront.jpeg",
+            "/images/products/TaniWhiteShirtBack.jpeg",
         ],
         brand: "JBL",
         title: "JBL Live 200BT",
