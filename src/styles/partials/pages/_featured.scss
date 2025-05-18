@@ -1,5 +1,5 @@
 #featured {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .featured_slides {
@@ -20,19 +20,19 @@
     overflow: hidden;
 
     img {
-        width: 100%;
+        width: 70%;
         height: auto;
         object-fit: cover;
     }
 }
 
 .featured_products_container {
-    padding: 20px;
+    padding: 30px;
 }
 
 .featured_card {
     border: 1px solid #ddd;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
