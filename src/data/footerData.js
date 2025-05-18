@@ -100,7 +100,7 @@ export const footSocial = [
     {
         id: 1,
         icon: <FaFacebookF />,
-        path: "/",
+        path: "https://www.facebook.com/tani.murwira",
     },
     {
         id: 2,
@@ -110,11 +110,6 @@ export const footSocial = [
     {
         id: 3,
         icon: <FaInstagram />,
-        path: "/",
-    },
-    {
-        id: 4,
-        icon: <FaLinkedinIn />,
-        path: "/",
+        path: "https://www.instagram.com/tani_beatz/",
     },
 ];

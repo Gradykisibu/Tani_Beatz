@@ -28,15 +28,6 @@ const Home = () => {
                     <ServiceSection />
                 </div>
             </section>
-
-            {/* <section id="products" className="section">
-                <div className="container">
-                    <SectionsHead heading="Top Products" />
-                    <TopProducts />
-                </div>
-            </section> */}
-
-
             <Services />
         </main>
     );

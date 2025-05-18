@@ -4,8 +4,8 @@ const servicesData = [
     {
         id: 1,
         icon: <FaShippingFast />,
-        title: "Uber Send Delivery",
-        info: "Ships in 20 Hours",
+        title: "Delivery",
+        info: "Ships in 6 Hours",
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const servicesData = [
         id: 4,
         icon: <FaCreditCard />,
         title: "Secure Payments",
-        info: "Pay on Delivery, Netbanking",
+        info: "Netbanking",
     },
 ];
 
